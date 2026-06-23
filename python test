@@ -1,0 +1,27 @@
+lives = 5
+hearts = "♡♡♡♡♡"
+print("you have 5 hearts in total")
+print(hearts)
+ug = int(input("guess an nnumber between 1 and 50"))
+if ug < 6:
+     hint ="warm"
+elif ug > 7 and ug < 12:
+     hint = "very warm!"
+elif ug > 14 and ug < 30:
+      hint = "cold"
+elif ug > 30:
+      hint = "ice cold"
+while rn != ug:
+    lives -= 1
+    hearts = hearts[:-1]
+    print(hearts)
+    print("Wrong but you are",hint,"and you have",lives,"lives left")
+    ug = int(input("guess an number between 1 and 50"))
+    if lives == 0:
+         print("game over")
+         break
+    elif rn == ug:
+         print("you won")
+    else:
+         print()
+    
