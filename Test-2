@@ -1,0 +1,31 @@
+oper = input("what operator do you want to use; div, mul, add or sub ")
+
+try:
+ a = float(input("enter the number: "))
+ b = float(input("enter the other number: "))
+
+except TypeError:
+     print("wrong input")
+
+def div():
+    try:
+        return print(a,"÷",b,"=",a/b)
+    except ZeroDivisionError:
+        print("YOU CAN'T DIVIDE BY ZERO")
+def mul():
+    return print(a,"×",b,"=",a*b)
+def add():
+    return print(a,"+",b,"=",a+b)
+def sub():
+    return print(a,"-",b,"=",a-b)
+
+if oper == "div":
+    div()
+elif oper == "mul":
+    mul()
+elif oper == "add":
+    add()
+elif oper == "sub":
+    sub()
+else:
+    print("not a valid operator")   
